@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rachana M Resume Portfolio</title>
+
+  <style>
+    /* ---------- Global Styles ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f3f8;
+      color: #333;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* ---------- Header Section ---------- */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #00aaff;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #00aaff;
+      color: #fff;
+    }
+
+    /* ---------- Section Base ---------- */
+    section {
+      display: none;
+      padding: 6rem 2rem;
+      min-height: 100vh;
+    }
+
+    /* ---------- New Home Section ---------- */
+    #home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #e6f3ff 40%, #ffffff 100%);
+      color: #004aad;
+    }
+
+    #home h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+      color: #333;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background: #005fcc;
+      transform: translateY(-3px);
+    }
+
+    /* ---------- Resume Section ---------- */
+    .resume-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .resume-section {
+      margin-bottom: 2rem;
+    }
+
+    .resume-section h2 {
+      color: #004aad;
+      border-bottom: 2px solid #004aad;
+      margin-bottom: 1rem;
+      padding-bottom: 5px;
+    }
+
+    .skills-list {
+      columns: 2;
+      list-style: square;
+      margin-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
+
+    /* ---------- Contact Section ---------- */
+    .contact-form {
+      max-width: 400px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #003580;
+      color: white;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 1rem;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .skills-list {
+        columns: 1;
+      }
+
+      #home h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Rachana M</div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active" data-section="home">Home</a></li>
+        <li><a href="#" data-section="resume">Resume</a></li>
+        <li><a href="#" data-section="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HOME SECTION -->
+  <section id="home">
+    <h1>Rachana M</h1>
+    <p>A motivated computer science graduate eager to apply academic knowledge to real-world projects. Passionate about learning modern technologies and building impactful software.</p>
+    <a href="#" class="btn" data-section="resume">View My Resume</a>
+  </section>
+
+  <!-- RESUME SECTION -->
+  <section id="resume">
+    <div class="resume-container">
+      <div class="resume-section">
+        <h2>Personal Information</h2>
+        <p><strong>Name:</strong> Rachana M</p>
+        <p><strong>Address:</strong> No.5, kr puram Bangalore - 560016</p>
+        <p><strong>Email:</strong> rachana2005@gmail.com</p>
+        <p><strong>Phone:</strong> 8431018508</p>
+      </div>
+
+      <div class="resume-section">
+        <h2>Education</h2>
+        <table>
+          <tr><th>Degree</th><th>Institution</th><th>Year</th></tr>
+          <tr><td>BE Computer Science</td><td>Gopalan College of Engineering and Management</td><td>2023</td></tr>
+        </table>
+      </div>
+
+      <div class="resume-section">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>HTML5, CSS3, JavaScript, React</li>
+          <li>Node.js, Express.js, MongoDB</li>
+          <li>Responsive Web Design</li>
+          <li>Version Control (Git)</li>
+        </ul>
+      </div>
+
+      <div class="resume-section">
+        <h2>Work Experience</h2>
+        <article>
+          <h3>Student</h3>
+          <p><em>Aug 2023 - Present</em></p>
+        </article>
+      </div>
+
+      <div class="resume-section">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Resumer builder application</strong> A responsive personal site built with HTML, CSS, and JS.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="subject" placeholder="Subject" required>
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Rachana M— All rights reserved.</p>
+  </footer>
+
+  <!-- ---------- JAVASCRIPT ---------- -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Show Home by default
+      $("#home").show();
+
+      // Navigation and button click behavior
+      $("nav a, .btn").on("click", function(e) {
+        e.preventDefault();
+        const sectionToShow = $(this).data("section");
+        if (!sectionToShow) return;
+
+        // Highlight active link
+        $("nav a").removeClass("active");
+        $("nav a[data-section='" + sectionToShow + "']").addClass("active");
+
+        // Hide all, show selected with fade
+        $("section").hide();
+        $("#" + sectionToShow).fadeIn(600);
+      });
+
+      // Contact form validation
+      $("#contactForm").submit(function(e) {
+        e.preventDefault();
+        let valid = true;
+
+        $("#contactForm input, #contactForm textarea").each(function() {
+          if ($(this).val().trim() === "") {
+            valid = false;
+            $(this).css("border", "2px solid red");
+          } else {
+            $(this).css("border", "1px solid #ccc");
+          }
+        });
+
+        if (valid) {
+          alert("Message sent successfully!");
+          $("#contactForm")[0].reset();
+        } else {
+          alert("Please fill all fields correctly.");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
